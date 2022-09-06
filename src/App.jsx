@@ -1,5 +1,6 @@
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Footer from "./components/footer";
 import "./App.css";
 
 function App() {
@@ -22,7 +23,42 @@ function App() {
   };
   console.log(endereco);
 
-  return <div className="App"></div>;
+  const enderecoAtt = endereco.map((e) => (
+    <>
+      <div className="conteudo-single">
+        <h3>{e.name}</h3>
+        <img className="proPhoto" src={e.image} />
+        <p>{e.description}</p>
+        <h4>{"De R$: " + e.oldPrice}</h4>
+        <h3>{"Por R$: " + e.price}</h3>
+        <input className="botaoEnv" type="submit" name />
+      </div>
+    </>
+  ));
+
+  const showMore = () => {
+    setPage(page + 1);
+  };
+
+  useEffect(() => {
+    getAddress();
+  }, [page]);
+
+  return (
+    <div className="App">
+      <Header />
+      <div className="conteudo">
+        <div className="center">
+          {enderecoAtt}
+          <button className="botaoMostra" onClick={showMore}>
+            Mais produtos aqui!
+          </button>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
