@@ -3,24 +3,26 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [page, setPage] = useState(1);
 
-  return (
-    <div className="App">
-      <div className="main">
-        <div className="center">
-          <div className="menu">
-            <div className="logo">
-              <h3>Especial para você</h3>
-            </div>
-            <div className="item-menu">
-              <a href="#">Login</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  const [endereco, setEndereco] = useState([]);
+
+  const url = `https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=${page}`;
+
+  const getAddress = async () => {
+    try {
+      let res = await fetch(url);
+      let data = await res.json();
+
+      console.log(data);
+      setEndereco([...endereco, ...data.products]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  console.log(endereco);
+
+  return <div className="App"></div>;
 }
 
 export default App;
