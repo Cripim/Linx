@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Raleway:ital,wght@1,100&family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:ital,wght@0,300;1,500&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Poppins", sans-serif;
 }
 
 .main {
@@ -71,7 +71,7 @@ form {
   display: flex;
   flex-direction: row;
   margin: 10px;
-  background-color: #38b6ff;
+  background-color: #f8f8f8;
 }
 .form h2 {
   text-transform: uppercase;
