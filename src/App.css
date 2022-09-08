@@ -10,7 +10,7 @@
   padding: 40px 0;
   width: 100%;
   min-height: 200px;
-  background-color: rgb(233, 79, 7);
+  background-color: #ffc145;
   background-position: center;
   background-size: contain;
 }
@@ -35,7 +35,7 @@
 
 .menu a {
   color: black;
-  background-color: whitesmoke;
+  background-color: #ffc145;
   text-decoration: none;
   border: 1px solid black;
   padding: 3px 8px;
@@ -71,7 +71,7 @@ form {
   display: flex;
   flex-direction: row;
   margin: 10px;
-  background-color: #f8f8f8;
+  background-color: #ffc145;
 }
 .form h2 {
   text-transform: uppercase;
@@ -87,7 +87,7 @@ form {
 .items-form input[type="submit"] {
   width: 60%;
   height: 30px;
-  background-color: whitesmoke;
+  background-color: #ffc145;
   border: solid 1px;
   border-radius: 5px;
   cursor: pointer;
@@ -146,10 +146,6 @@ form {
   width: 30%;
 }
 
-.logo {
-  width: 130px;
-  height: 50px;
-}
 .pTitulo {
   width: 100%;
   text-align: start;
@@ -176,11 +172,7 @@ form {
   width: 100%;
   height: 250px;
 
-  /* UI Properties */
-
-  background-image: url(./assets/footer.jpg);
-  background-position: center;
-  background-size: contain;
+  background-color: #ffc145;
 }
 
 @media screen and (max-width: 768px) {
